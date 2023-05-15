@@ -1,0 +1,30 @@
+# Класс для представления студента
+class Student
+  attr_accessor :name, :age, :major
+
+  def initialize(name, age, major)
+    @name = name
+    @age = age
+    @major = major
+  end
+
+  def study
+    puts "#{name} изучает #{major}"
+  end
+
+  def celebrate_birthday
+    @age += 1
+    puts "#{name} отмечает день рождения и теперь ему #{age} лет"
+  end
+end
+
+# Создаем объекты студентов
+student1 = Student.new("Алексей", 20, "Информатика")
+student2 = Student.new("Елена", 19, "Математика")
+
+# Вызываем методы объектов
+student1.study
+student2.study
+
+student1.celebrate_birthday
+student2.celebrate_birthday
